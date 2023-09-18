@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.profileActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+      <ImageView
+          android:layout_width="95dp"
+          android:layout_height="95dp"
+          android:layout_gravity="center_horizontal"
+          android:src="@drawable/circle" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center">
+
+
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/btnselectimag"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text=" select image "
+             android:layout_gravity="center_horizontal" />
+
+      </LinearLayout>
+
+   </LinearLayout>
+
+   <EditText
+       android:id="@+id/edtPlace"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/_5sdp"
+       android:textColor="@color/white"
+       android:hint="Place" />
+
+   <EditText
+       android:id="@+id/edtCity"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/_5sdp"
+       android:hint="Enter City" />
+
+   <EditText
+       android:id="@+id/edtnumber"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/_5sdp"
+       android:hint="Enter Number" />
+
+   <EditText
+       android:id="@+id/edtemail"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/_5sdp"
+       android:hint="Enter Email" />
+
+   <EditText
+       android:id="@+id/edtprice"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/_5sdp"
+       android:hint="Enter Price" />
+
+   <EditText
+       android:id="@+id/edtdescription"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/_5sdp"
+       android:hint="Description" />
+
+
+   <EditText
+       android:id="@+id/edtrate"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/_5sdp"
+       android:hint="Enter Rating" />
+
+   <Button
+       android:id="@+id/BtnAdd"
+       android:textColor="@color/black"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:text="add Data" />
+
+   <Button
+       android:id="@+id/Btnshow"
+       android:textColor="@color/black"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_margin="@dimen/_10sdp"
+       android:text="Show" />
+
+
+
+
+</LinearLayout>

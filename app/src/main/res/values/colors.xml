@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#aaa</color>
+    <color name="mainGreen">#34e0a1</color>
+    <color name="DarkGreen">#2C4D36</color>
+    <color name="appColor">#F4B6B1</color>
+
+
+    <color name="light">#AFD3E2</color>
+    <!--    <color name="dark">#146C94</color>-->
+    <color name="dark">#03323c</color>
+
+    <color name="test1">#03323c</color>
+    <color name="test2">#063b49</color>
+
+
+</resources>
