@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.travelapp.Activity.LoginActivity
+import com.example.travelapp.Activity.MountainActivity
 import com.example.travelapp.Activity.profileActivity
 import com.example.travelapp.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -63,6 +64,10 @@ class ProfileFragment : Fragment() {
 
             var intent = Intent(context, profileActivity::class.java)
             startActivity(intent)
+        }
+        profileBinding.txtMountain.setOnClickListener {
+            var i=Intent(context,MountainActivity::class.java)
+            startActivity(i)
         }
 
 

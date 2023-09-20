@@ -14,6 +14,8 @@ class StudentModelClass {
     var price: String = ""
     var Rating: String = ""
     var key: String = ""
+    var Day:String=""
+    var Favourite:String=""
 
     constructor(
         palce: String,
@@ -24,6 +26,8 @@ class StudentModelClass {
         price: String,
         rating: String,
         key: String,
+        Day:String,
+        Favourite:String,
         ImageUri: Uri,
 
         ) {
@@ -36,10 +40,13 @@ class StudentModelClass {
         this.city = city
         this.price = price
         this.Rating = rating
+        this.Day= Day
+        this.Favourite=Favourite
 
     }
 
     constructor() {
 
     }
+
 }

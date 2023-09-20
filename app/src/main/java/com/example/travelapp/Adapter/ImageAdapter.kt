@@ -1,6 +1,7 @@
 package com.example.travelapp.Adapter
 
 
+import android.annotation.SuppressLint
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -16,34 +17,25 @@ import com.example.travelapp.R
 import java.util.*
 import kotlin.collections.ArrayList
 
-class ImageAdapter(var imageList: ArrayList<ImageSliderModel>, var homeFragment: HomeFragment, var invoke : ((ImageSliderModel) -> Unit)) :PagerAdapter() {
+class ImageAdapter (var images:List<Int>): PagerAdapter() {
     override fun getCount(): Int {
-      return imageList.size
+        return images.size
     }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
-        return view === `object` as RelativeLayout
+        return view==`object`
     }
 
-    override fun instantiateItem(container: ViewGroup, position: Int): Any {
-
-        val itemView: View = LayoutInflater.from(container.context).inflate(R.layout.image_slider_item, container, false)
-
-
-        var imageView: ImageView = itemView.findViewById(R.id.imgView)
-
-        Glide.with(homeFragment).load(imageList[position].image).placeholder(R.drawable.baseline_image_24).into(imageView)
-        Log.e("TAG", "instantiateItem: "+imageView )
-
-        imageView.setOnClickListener {
-            invoke.invoke( imageList[position])
-
-        }
-        Objects.requireNonNull(container).addView(itemView)
-
-        return itemView
-    }
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        container.removeView(`object` as RelativeLayout)
+        container.removeView(`object`as View)
+    }
+
+    @SuppressLint("MissingInflatedId")
+    override fun instantiateItem(container: ViewGroup, position: Int): Any {
+        var view =LayoutInflater.from(container.context).inflate(R.layout.image_item_file,container,false)
+        var imageview=view.findViewById<ImageView>(R.id.imgview)
+        imageview.setImageResource(images[position])
+        container.addView(view)
+        return view
     }
 }
